@@ -7,4 +7,4 @@ All notable changes to this project are documented here. Format follows
 
 ### Added
 - Milestone 0 scaffolding: installable package skeleton, detector base interface, CI (lint,
-  type-check, tests), config layout, ADR-0001 scope document, roadmap.
+  type-check, tests), config layout, ADR-0001 scope document.
