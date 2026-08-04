@@ -17,7 +17,7 @@ with rigorous, leakage-tested evaluation.
 ## Why
 
 Attacks on industrial control systems are rising, but most published detectors are heavy deep
-models that are impractical on edge gateways — and recent rigorous evaluations show simple
+models that are impractical on edge gateways, and recent rigorous evaluations show simple
 baselines are often competitive with them. What's missing is a **map of the
 efficiency-vs-detection trade-off across model families on a shared open dataset, under a
 rigorous metric protocol** (point-wise + range-aware metrics, validation-only thresholds,
@@ -54,7 +54,7 @@ results/          # committed metrics, figures, raw benchmark logs
 notebooks/        # exploration only — never the source of truth
 ```
 
-## Methodology in one paragraph
+## Methodology
 
 Reproduce a credible deep baseline (LSTM-AE/USAD) on HAI → implement 3–5 lightweight detectors
 (PCA reconstruction, Isolation Forest, CUSUM/EWMA, tiny autoencoder) behind one config-driven
@@ -63,7 +63,7 @@ point-wise **and** range-aware (eTaPR) metrics plus time-to-detection → conver
 ONNX and benchmark single-threaded constrained-CPU latency/memory/size → publish the Pareto
 frontier.
 
-## Limitations (kept honest from day one)
+## Limitations
 
 - Resource numbers are **constrained-CPU estimates**, not on-device measurements (real edge
   hardware is future work).
