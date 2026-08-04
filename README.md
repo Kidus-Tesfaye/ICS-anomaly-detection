@@ -1,8 +1,5 @@
 # ics-anomaly-lite
 
-> **Status: Milestone 0 — scaffolding.** See [ROADMAP.md](ROADMAP.md) for the full plan and
-> current progress.
-
 Lightweight anomaly detection for industrial control system (ICS) traffic: mapping the
 **detection-quality vs. resource-cost Pareto frontier** for statistical, shallow-ML, and tiny-NN
 detectors on open ICS datasets (HAI first, SWaT second), against a reproduced deep baseline —
