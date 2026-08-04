@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ics-anomaly-lite"
+version = "0.1.0"
+description = "Lightweight anomaly detection for industrial control system traffic: mapping the detection-vs-cost Pareto frontier on open ICS datasets."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Kidus", email = "kidustesfaye34343@gmail.com" }]
+keywords = ["anomaly-detection", "ics", "scada", "cybersecurity", "tinyml", "edge"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Security",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scikit-learn>=1.4",
+  "matplotlib>=3.8",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-benchmark>=4.0",
+  "ruff>=0.6",
+  "mypy>=1.10",
+  "pre-commit>=3.7",
+]
+onnx = [
+  "onnx>=1.16",
+  "onnxruntime>=1.18",
+  "skl2onnx>=1.17",
+]
+
+[project.urls]
+Repository = "https://github.com/OWNER/ics-anomaly-lite"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ics_anomaly"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "NPY"]
+
+[tool.mypy]
+mypy_path = "src"
+packages = ["ics_anomaly"]
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+no_implicit_optional = true
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*", "matplotlib.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

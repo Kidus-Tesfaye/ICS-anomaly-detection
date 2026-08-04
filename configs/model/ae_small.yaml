@@ -1,0 +1,10 @@
+# Lightweight candidate: tiny autoencoder (tiny-NN family, few thousand parameters)
+model:
+  name: ae_small
+  class: ics_anomaly.models.ae.SmallAutoencoderDetector      # implemented in M4
+  params:
+    hidden_dims: [32, 8, 32]
+    epochs: 50
+    batch_size: 256
+    lr: 1.0e-3
+    seed: 0

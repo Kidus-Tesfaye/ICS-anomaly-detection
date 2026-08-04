@@ -1,0 +1,20 @@
+# HAI (HIL-based Augmented ICS) security dataset — primary dataset (see ADR-0001).
+# Publicly downloadable, no registration: https://github.com/icsdataset/hai
+dataset:
+  name: hai
+  version: "TODO"            # pin the exact release used, e.g. hai-22.04
+  source_url: "https://github.com/icsdataset/hai"
+  sha256: {}                 # filename -> checksum, filled by the M2 download script
+
+preprocessing:
+  resample_rate: null        # native sampling unless downsampling is justified in an ADR
+  scaler: standard           # fit on TRAIN ONLY — enforced by tests/data_validation
+  window_size: 60            # samples per feature window (ablated in M5)
+  window_stride: 1
+
+split:
+  strategy: contiguous_blocks   # NEVER random row-level splits (leakage — ROADMAP §6)
+  train_fraction: 0.6
+  val_fraction: 0.2
+  test_fraction: 0.2
+  boundary_gap: 60           # samples discarded at each boundary; must be >= window_size

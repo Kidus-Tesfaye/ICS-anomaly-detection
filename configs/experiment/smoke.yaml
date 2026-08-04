@@ -1,0 +1,8 @@
+# Tiny synthetic end-to-end run used by the CI integration test (M7).
+# Must complete in seconds with no external data.
+experiment:
+  name: smoke
+  data: synthetic            # generated in-process by tests/integration
+  models: [iforest, pca]
+  seeds: [0]
+  metrics: [pointwise_f1, pr_auc]

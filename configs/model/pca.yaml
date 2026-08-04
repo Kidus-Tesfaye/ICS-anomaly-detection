@@ -1,0 +1,8 @@
+# Lightweight candidate: PCA reconstruction error (statistical family).
+# Competitive with deep models on ICS benchmarks per Audibert 2022 / Quo Vadis 2024.
+model:
+  name: pca
+  class: ics_anomaly.models.pca.PCAReconstructionDetector    # implemented in M4
+  params:
+    n_components: 0.95      # retained variance
+    random_state: 0

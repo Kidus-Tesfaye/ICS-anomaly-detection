@@ -1,0 +1,13 @@
+# Heavy baseline to reproduce in M3 (LSTM autoencoder; swap for USAD if reproduction
+# of the chosen source paper proves more tractable — record the decision in an ADR).
+model:
+  name: lstm_ae_baseline
+  class: ics_anomaly.models.lstm_ae.LSTMAutoencoderDetector  # implemented in M3
+  source_paper: "TODO: exact citation + reported numbers to reproduce against"
+  params:
+    hidden_size: 64
+    num_layers: 2
+    epochs: 100
+    batch_size: 256
+    lr: 1.0e-3
+    seed: 0

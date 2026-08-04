@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "ics-anomaly-lite: Lightweight anomaly detection for industrial control traffic"
+version: 0.1.0
+date-released: "2026-07-15"
+license: MIT
+repository-code: "https://github.com/OWNER/ics-anomaly-lite"
+authors:
+  - given-names: Kidus
+    family-names: Tesfaye
+    email: kidustesfaye34343@gmail.com

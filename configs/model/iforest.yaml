@@ -1,0 +1,8 @@
+# Lightweight candidate: Isolation Forest (statistical family)
+model:
+  name: iforest
+  class: ics_anomaly.models.iforest.IsolationForestDetector   # implemented in M4
+  params:
+    n_estimators: 100
+    max_samples: 256
+    random_state: 0
