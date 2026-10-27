@@ -5,7 +5,7 @@ title: "ics-anomaly-lite: Lightweight anomaly detection for industrial control t
 version: 0.1.0
 date-released: "2026-07-15"
 license: MIT
-repository-code: "https://github.com/OWNER/ics-anomaly-lite"
+repository-code: "https://github.com/Kidus-Tesfaye/ICS-anomaly-detection"
 authors:
   - given-names: Kidus
     family-names: Tesfaye

@@ -7,7 +7,7 @@ with rigorous, leakage-tested evaluation.
 
 <!-- TODO(M5): replace with the one-sentence falsifiable claim + headline Pareto figure -->
 
-[![CI](https://github.com/OWNER/ics-anomaly-lite/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/ics-anomaly-lite/actions/workflows/ci.yml)
+[![CI](https://github.com/Kidus-Tesfaye/ICS-anomaly-detection/actions/workflows/ci.yml/badge.svg)](https://github.com/Kidus-Tesfaye/ICS-anomaly-detection/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](pyproject.toml)
 
@@ -23,8 +23,8 @@ leakage-tested splits). That map is this project's contribution.
 ## Quickstart
 
 ```bash
-git clone https://github.com/OWNER/ics-anomaly-lite
-cd ics-anomaly-lite
+git clone https://github.com/Kidus-Tesfaye/ICS-anomaly-detection
+cd ics-anomaly-detection
 
 # with uv (recommended)
 uv sync --extra dev
