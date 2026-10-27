@@ -1,11 +1,8 @@
-# ics-anomaly-lite
+# ics-anomaly-detection
 
-Lightweight anomaly detection for industrial control system (ICS) traffic: mapping the
-**detection-quality vs. resource-cost Pareto frontier** for statistical, shallow-ML, and tiny-NN
-detectors on open ICS datasets (HAI first, SWaT second), against a reproduced deep baseline —
-with rigorous, leakage-tested evaluation.
+Lightweight anomaly detection for industrial control system (ICS) traffic for statistical, shallow-ML, and tiny-NN
+detectors on open ICS datasets.
 
-<!-- TODO(M5): replace with the one-sentence falsifiable claim + headline Pareto figure -->
 
 [![CI](https://github.com/Kidus-Tesfaye/ICS-anomaly-detection/actions/workflows/ci.yml/badge.svg)](https://github.com/Kidus-Tesfaye/ICS-anomaly-detection/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -15,10 +12,9 @@ with rigorous, leakage-tested evaluation.
 
 Attacks on industrial control systems are rising, but most published detectors are heavy deep
 models that are impractical on edge gateways, and recent rigorous evaluations show simple
-baselines are often competitive with them. What's missing is a **map of the
+baselines are often competitive with them. What's missing is a map of the
 efficiency-vs-detection trade-off across model families on a shared open dataset, under a
-rigorous metric protocol** (point-wise + range-aware metrics, validation-only thresholds,
-leakage-tested splits). That map is this project's contribution.
+rigorous metric protocol. This project aims to address this gap. 
 
 ## Quickstart
 
@@ -56,13 +52,13 @@ notebooks/        # exploration only — never the source of truth
 Reproduce a credible deep baseline (LSTM-AE/USAD) on HAI → implement 3–5 lightweight detectors
 (PCA reconstruction, Isolation Forest, CUSUM/EWMA, tiny autoencoder) behind one config-driven
 interface → evaluate all of them on an identical, block-split, leakage-tested protocol with
-point-wise **and** range-aware (eTaPR) metrics plus time-to-detection → convert everything to
+point-wise and range-aware (eTaPR) metrics plus time-to-detection → convert everything to
 ONNX and benchmark single-threaded constrained-CPU latency/memory/size → publish the Pareto
 frontier.
 
 ## Limitations
 
-- Resource numbers are **constrained-CPU estimates**, not on-device measurements (real edge
+- Resource numbers are constrained-CPU estimates, not on-device measurements (real edge
   hardware is future work).
 - Raw datasets are license-restricted and never redistributed here; see `docs/data_card.md`
   for access instructions and checksums.
