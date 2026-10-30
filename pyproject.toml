@@ -44,7 +44,7 @@ onnx = [
 ]
 
 [project.urls]
-Repository = "https://github.com/OWNER/ics-anomaly-lite"
+Repository = "https://github.com/Kidus-Tesfaye/ICS-anomaly-detection/blob/main/pyproject.toml"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/ics_anomaly"]
