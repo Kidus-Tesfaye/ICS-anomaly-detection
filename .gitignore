@@ -1,4 +1,3 @@
-# Data (see docs/data_card.md) 
 data/raw/*
 data/interim/*
 data/processed/*
@@ -6,7 +5,6 @@ data/processed/*
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 
-# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -15,23 +13,20 @@ build/
 .venv/
 venv/
 
-# Tooling caches
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Experiment tracking
 mlruns/
 mlflow.db
 
-# Notebooks
 .ipynb_checkpoints/
 
-# OS / editor
 .DS_Store
 Thumbs.db
 
-# VS Code
 .vscode/
+
+*.txt
