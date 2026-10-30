@@ -65,4 +65,4 @@ frontier.
 
 ## License & citation
 
-MIT — see [LICENSE](LICENSE). If you use this work, please cite via [CITATION.cff](CITATION.cff).
+MIT see [LICENSE](LICENSE). If you use this work, please cite via [CITATION.cff](CITATION.cff).
